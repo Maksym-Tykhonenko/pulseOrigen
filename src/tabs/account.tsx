@@ -6,8 +6,8 @@ import moment from 'moment';
 import { useFocusEffect } from '@react-navigation/native';
 import { TabContext } from './navigation';
 import Reset from '../../assets/svg/reset.svg'
-import ActiveCheckout from '../../assets/svg/active-checkout.svg'
-import NonActiveCheckout from '../../assets/svg/nonactive-checkout.svg'
+//import ActiveCheckout from '../../assets/svg/active-checkout.svg'
+//import NonActiveCheckout from '../../assets/svg/nonactive-checkout.svg'
 import Avatar from '../../assets/svg/avatar.svg'
 import Camera from '../../assets/svg/camera.svg'
 import { launchImageLibrary } from 'react-native-image-picker';
@@ -128,6 +128,8 @@ export default function Account({ navigation }: any) {
           placeholder="Name Surname"
           editable={isEdit}
         />
+        {/**Coment email */}
+        {/** 
         <Text
           style={styles.label}
         >
@@ -139,7 +141,9 @@ export default function Account({ navigation }: any) {
           value={email}
           placeholder="email@gmail.com"
           editable={isEdit}
-        />
+        />*/}
+        {/**Coment date bird */}
+        {/** 
         <Text
           style={styles.label}
         >
@@ -164,7 +168,9 @@ export default function Account({ navigation }: any) {
               ? moment(selectedDate).format('DD/MM/YYYY')
               : 'DD/MM/YYYY'}
           </Text>
-        </Pressable>
+        </Pressable>*/}
+        {/**Coment gender  */}
+        {/** 
         <Text
           style={styles.label}
         >
@@ -220,7 +226,7 @@ export default function Account({ navigation }: any) {
               Female
             </Text>
           </Pressable>
-        </View>
+        </View>*/}
         <TouchableOpacity
           activeOpacity={0.7}
           onPress={() => setIsEdit(!isEdit)}
