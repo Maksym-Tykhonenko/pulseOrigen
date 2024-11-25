@@ -6,8 +6,8 @@ import moment from 'moment';
 import { useFocusEffect } from '@react-navigation/native';
 import { TabContext } from './navigation';
 import Reset from '../../assets/svg/reset.svg'
-//import ActiveCheckout from '../../assets/svg/active-checkout.svg'
-//import NonActiveCheckout from '../../assets/svg/nonactive-checkout.svg'
+import ActiveCheckout from '../../assets/svg/active-checkout.svg'
+import NonActiveCheckout from '../../assets/svg/nonactive-checkout.svg'
 import Avatar from '../../assets/svg/avatar.svg'
 import Camera from '../../assets/svg/camera.svg'
 import { launchImageLibrary } from 'react-native-image-picker';
@@ -128,8 +128,6 @@ export default function Account({ navigation }: any) {
           placeholder="Name Surname"
           editable={isEdit}
         />
-        {/**Coment email */}
-        {/** 
         <Text
           style={styles.label}
         >
@@ -141,92 +139,7 @@ export default function Account({ navigation }: any) {
           value={email}
           placeholder="email@gmail.com"
           editable={isEdit}
-        />*/}
-        {/**Coment date bird */}
-        {/** 
-        <Text
-          style={styles.label}
-        >
-          Date Of Birth
-        </Text>
-        <Pressable
-          style={styles.input}
-          disabled={!isEdit}
-          onPress={() => {
-            setDatePickerVisible(true);
-          }}
-        >
-          <Text
-            style={{
-              color: showSelectedDate ? '#1E1E1E' : '#C4C3C3',
-              fontFamily: 'Comfortaa',
-              fontSize: 14,
-              fontWeight: 400,
-              lineHeight: 17,
-            }}>
-            {showSelectedDate
-              ? moment(selectedDate).format('DD/MM/YYYY')
-              : 'DD/MM/YYYY'}
-          </Text>
-        </Pressable>*/}
-        {/**Coment gender  */}
-        {/** 
-        <Text
-          style={styles.label}
-        >
-          Your Genger
-        </Text>
-        <View
-          style={{
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-          }}
-        >
-          <Pressable
-            style={[
-              styles.input,
-              {
-              width: '45%',
-              flexDirection: 'row',
-              }
-            ]}
-            onPress={() => setGender('male')}
-            disabled={!isEdit}
-          >
-            {gender === 'male' ? 
-              <ActiveCheckout/>
-              :
-              <NonActiveCheckout/>
-            }
-            <Text
-              style={styles.genderText}
-            >
-              Male
-            </Text>
-          </Pressable>
-          <Pressable
-            style={[
-              styles.input,
-              {
-              width: '45%',
-              flexDirection: 'row',
-              }
-            ]}
-            onPress={() => setGender('female')}
-            disabled={!isEdit}
-          >
-            {gender === 'female' ? 
-              <ActiveCheckout/>
-              :
-              <NonActiveCheckout/>
-            }
-            <Text
-              style={styles.genderText}
-            >
-              Female
-            </Text>
-          </Pressable>
-        </View>*/}
+        />
         <TouchableOpacity
           activeOpacity={0.7}
           onPress={() => setIsEdit(!isEdit)}

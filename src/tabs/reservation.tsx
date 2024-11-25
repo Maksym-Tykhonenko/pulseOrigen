@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView, TextInput, Pressable, Modal, FlatList } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView, TextInput, Pressable, Modal, FlatList, Alert } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { TabContext } from './navigation';
 import LinearGradient from 'react-native-linear-gradient';
@@ -107,7 +107,28 @@ export default function Reservation({ navigation }: any) {
             />
           </View>
         </Modal>
-        <TouchableOpacity activeOpacity={0.7}>
+        <TouchableOpacity 
+          activeOpacity={0.7}
+          onPress={() => {
+            Alert.alert(
+              "Success",
+              "Request sent successfully!",
+              [
+                {
+                  text: "Ok",
+                  onPress: () => {
+                    setName('');
+                    setEmail('');
+                    setPhone('');
+                    setFormattedValue('');
+                    setOccupation('');
+                  }, 
+                },
+              ],
+            );
+            }
+          }
+        >
           <LinearGradient colors={['#0F9A86', '#1EFBFB']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} style={styles.button}>
             <Text style={styles.buttonText}>Confirm</Text>
           </LinearGradient>

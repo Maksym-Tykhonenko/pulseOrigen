@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
   },
   descriptionTextContainer: {
     position: 'absolute',
-    top: -270,
+    top: -CARD_WIDTH + 50,
   },
   descriptionTitle: {
     fontSize: 20,

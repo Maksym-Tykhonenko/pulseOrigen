@@ -43,12 +43,12 @@ export default function Game({ navigation }: any) {
       }}
     >
       <FlatList
-        style={{paddingTop: 70}}
         data={data}
         renderItem={renderItem}
         keyExtractor={(item: any) => item.id}
         numColumns={numColumns}
         contentContainerStyle={styles.container}
+        showsVerticalScrollIndicator={false}
       />
     </View>
   )
@@ -72,4 +72,8 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     marginTop: 5,
   },
+  container: {
+    paddingTop: 70,
+    paddingBottom: 40,
+  }
 })

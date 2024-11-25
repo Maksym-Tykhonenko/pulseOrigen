@@ -17,12 +17,7 @@ export default function Welcome({ navigation }: any) {
         <Text
           style={styles.title}
         >
-          Welcome to
-        </Text>
-        <Text
-          style={{textAlign:'center', fontSize:40, marginBottom:20, fontWeight:'bold', color:'#fff'}}
-        >
-          Events Empire Quest
+          Welcome to EMPIR
         </Text>
         <Text
           style={styles.text}

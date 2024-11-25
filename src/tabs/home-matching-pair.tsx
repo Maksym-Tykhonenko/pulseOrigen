@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, Image, StyleSheet, Pressable, Modal } from 'react-native';
+import { View, Text, Image, StyleSheet, Pressable, Modal, ScrollView } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import BackArrowSvg from '../../assets/svg/back-arrow.svg';
 import CardSvg from '../../assets/svg/back-card.svg';
@@ -107,7 +107,10 @@ export default function HomeGame({ navigation }: any) {
         <Text style={styles.mainText}>Matching Pairs</Text>
         <View style={{width: 33}} />
       </View>
-      <View style={styles.grid}>
+      <ScrollView 
+        contentContainerStyle={styles.grid}
+        showsVerticalScrollIndicator={false}
+      >
         {grid.map((tile, index) => (
           <Pressable key={index} onPress={() => handleTilePress(index)}>
             {tile.isRevealed || tile.isMatched ? (
@@ -117,7 +120,7 @@ export default function HomeGame({ navigation }: any) {
             )}
           </Pressable>
         ))}
-      </View>
+      </ScrollView>
       <Modal
         animationType="fade"
         transparent={true}
@@ -155,7 +158,7 @@ const styles = StyleSheet.create({
   grid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
   },
   image: {
     width: 160,
