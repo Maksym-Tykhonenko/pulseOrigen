@@ -13,8 +13,10 @@ export default function Home({ navigation }: any) {
       setRouteName('home')
     }, []),
   );
-
+  // ../../assets/png/home-game-bg.jpeg
+  // ../../assets/newDiz/bg.jpg
   return (
+    
     <ScrollView
       style={{
         paddingHorizontal: 20,
@@ -37,7 +39,7 @@ export default function Home({ navigation }: any) {
             borderColor: '#D9D9D9',
             borderRadius: 20,
           }}
-          blurRadius={5} 
+          blurRadius={5}
         >
           <Text
             style={styles.gameSection__title}
@@ -54,7 +56,7 @@ export default function Home({ navigation }: any) {
             onPress={() => navigation.navigate('HomeGame')}
           >
             <LinearGradient
-              colors={['#0F9A86','#1EFBFB']}
+              colors={['#0F9A86', '#1EFBFB']}
               start={{ x: 0, y: 0 }}
               end={{ x: 1, y: 0 }}
               style={styles.gameSection__button}
@@ -81,7 +83,7 @@ export default function Home({ navigation }: any) {
           }}
         >
           <Text
-            style={[styles.section__title, {marginLeft: 20}]}
+            style={[styles.section__title, { marginLeft: 20 }]}
           >
             News updates
           </Text>
@@ -101,17 +103,17 @@ export default function Home({ navigation }: any) {
         >
           <Image
             source={require('../../assets/png/news-one.png')}
-            style={[styles.newsSection__img, {marginLeft: 20}]}
+            style={[styles.newsSection__img, { marginLeft: 20 }]}
             resizeMode={'cover'}
           />
           <Image
             source={require('../../assets/png/news-two.png')}
             style={styles.newsSection__img}
             resizeMode={'cover'}
-            />
+          />
           <Image
             source={require('../../assets/png/news-three.png')}
-            style={[styles.newsSection__img, {marginRight: 40}]}
+            style={[styles.newsSection__img, { marginRight: 40 }]}
             resizeMode={'cover'}
           />
         </ScrollView>
@@ -120,7 +122,7 @@ export default function Home({ navigation }: any) {
         style={styles.activitiesSection}
       >
         <Text
-          style={[styles.section__title, {marginBottom: 20}]}
+          style={[styles.section__title, { marginBottom: 20 }]}
         >
           Recent Activities
         </Text>
@@ -247,7 +249,9 @@ export default function Home({ navigation }: any) {
         </TouchableOpacity>
       </View>
     </ScrollView>
-  )
+      
+    
+  );
 };
 
 const styles = StyleSheet.create({
