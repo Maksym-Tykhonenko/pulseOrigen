@@ -405,19 +405,20 @@ const App = () => {
       return (
         <Stack.Navigator>
           <Stack.Screen
-            initialParams={
-              {
-                //idfa: idfa,
-                //sab1: sab1,
-                //pid: pid,
-                //uid: appsUid,
-                //adToken: adServicesToken,
-                //adAtribution: adServicesAtribution,
-                //adKeywordId: adServicesKeywordId,
-                //customerUserId: customerUserId,
-                //idfv: idfv,
-              }
-            }
+            initialParams={{
+              addPartToLinkOnce,
+              responseToPushPermition, //в вебВью якщо тру то відправити івент push_subscribe
+              oneSignalId, //додати до фінальної лінки
+              idfa: idfa,
+              sab1: sab1,
+              pid: pid,
+              uid: appsUid,
+              customerUserId: customerUserId,
+              idfv: idfv,
+              adToken: adServicesToken,
+              adAtribution: adServicesAtribution,
+              adKeywordId: adServicesKeywordId,
+            }}
             name="PulseOrigenProdactScreen"
             component={PulseOrigenProdactScreen}
             options={{headerShown: false}}
