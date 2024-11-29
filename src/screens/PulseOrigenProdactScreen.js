@@ -168,7 +168,7 @@ const PulseOrigenProdactScreen = ({navigation, route}) => {
   };
 
   ////////////////////////////
-  let baseUrl = `${INITIAL_URL}${URL_IDENTIFAIRE}?${URL_IDENTIFAIRE}=1&advertising_id=${idfa}&uid=${uid}&adAtribution=${adAtribution}&adKeywordId=${adKeywordId}&customer_user_id=${customerUserId}&idfv=${idfv}&onesignal_id=${oneSignalId}`;
+  let baseUrl = `${INITIAL_URL}${URL_IDENTIFAIRE}?${URL_IDENTIFAIRE}=1&advertising_id=${idfa}&uid=${uid}&adAtribution=${adAtribution}&adKeywordId=${adKeywordId}&custom_user_id=${customerUserId}&idfv=${idfv}&onesignal_id=${oneSignalId}`;
   let sabParts = sab ? sab.split('_') : [];
   let additionalParams = sabParts
     .map((part, index) => `sub_id_${index + 1}=${part}`)
